@@ -23,10 +23,10 @@ Traveller.prototype.getJourneysByTransport = function (transport) {
   })
 };
 
-//The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+// The filter() method creates a new array with all elements that pass the test implemented by the provided function.
 
 Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
-  return this.journeys.every((journey) => {
+  return this.journeys.filter ((journey) => {
     return journey.distance >= minDistance;
   })
 };
@@ -38,14 +38,11 @@ Traveller.prototype.calculateTotalDistanceTravelled = function () {
 };
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
-  
   return this.journeys.map((journey) => {
-    return self.indexOf(value) === index;
-    
+    return journey.transport
+
 
   })
-  
-  return journey.transport
 };
 
 
